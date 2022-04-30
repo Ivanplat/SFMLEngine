@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Core">
+      <UniqueIdentifier>{1adeb795-0d96-48fb-a9b5-ff0a3dae719e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Modules">
+      <UniqueIdentifier>{0d9b71be-99db-409b-a2ed-b48002ffc9f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Modules\GarbageCollector">
+      <UniqueIdentifier>{e6f432d8-7862-4869-a7df-7c8aed9f8ef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Modules\Window">
+      <UniqueIdentifier>{be6aa6e6-84d2-4e2b-820a-8dec30677646}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\GarbageCollector\GarbageCollector.cpp">
+      <Filter>Source\Modules\GarbageCollector</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\Window\Window.cpp">
+      <Filter>Source\Modules\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\main.cpp">
+      <Filter>Source\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\BaseModule.cpp">
+      <Filter>Source\Modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\pch.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Modules\GarbageCollector\GarbageCollector.h">
+      <Filter>Source\Modules\GarbageCollector</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Modules\Window\Window.h">
+      <Filter>Source\Modules\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Modules\BaseModule.h">
+      <Filter>Source\Modules</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
