@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Window.h"
+#include <random>
 
 Window::~Window() noexcept
 {
@@ -27,7 +28,10 @@ void Window::StartupModule()
 
 void Window::ShutdownModule()
 {
-	GC->DestroyModule(this);
+	if(window)
+	{
+		window->close();
+	}
 }
 
 void Window::MainLoop()
@@ -46,6 +50,7 @@ void Window::MainLoop()
 					{
 						if (e.type == sf::Event::Closed)
 						{
+							GC->DestroyModule(this);
 							break;
 						}
 					}
@@ -58,9 +63,32 @@ void Window::MainLoop()
 						}
 					}
 					window->display();
+					RandomMove();
 				}
 			}
 			mtx.unlock();
 	});
 	MainThread_->detach();
+}
+
+void Window::RandomMove()
+{
+	for (auto i : Shapes_)
+	{
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::mt19937 gen2(rd());
+		std::uniform_real_distribution<> dist(-1.0f, 1.0f);
+		std::uniform_real_distribution<> dist2(-1.0f, 1.0f);
+		i->setPosition(i->getPosition() + sf::Vector2f(dist(gen), dist2(gen2)));
+	}
+}
+
+sf::Shape* Window::GetTailShape()
+{
+	if (Shapes_.size() > 0)
+	{
+		return Shapes_[Shapes_.size() - 1];
+	}
+	return nullptr;
 }

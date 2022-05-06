@@ -14,9 +14,11 @@ public:
 	virtual void ShutdownModule() override;
 private:
 	void MainLoop();
+	void RandomMove();
 public:
 	template<class T>
 	T* NewShape();
+	sf::Shape* GetTailShape();
 public:
 	sf::RenderWindow* window;
 private:
@@ -30,9 +32,9 @@ T* Window::NewShape()
 	static std::mutex mtx;
 	mtx.lock();
 	auto obj = new T();
-	if (dynamic_cast<sf::Shape*>(obj))
+	if (auto objc = dynamic_cast<sf::Shape*>(obj))
 	{
-		Shapes_.push_back(dynamic_cast<sf::Shape*>(obj));
+		Shapes_.push_back(objc);
 		mtx.unlock();
 		return obj;
 	}

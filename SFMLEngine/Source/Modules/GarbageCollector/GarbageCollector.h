@@ -52,6 +52,14 @@ void GarbageCollector::DestroyModule(T* Module)
 {
 	if (auto mdl = GetModule<T>())
 	{
+		if (auto mdlc = dynamic_cast<IBaseModule*>(mdl))
+		{
+			auto it = std::find(Modules_.begin(), Modules_.end(), mdlc);
+			if (it != Modules_.end())
+			{
+				Modules_.erase(it);
+			}
+		}
 		delete mdl;
 	}
 }
