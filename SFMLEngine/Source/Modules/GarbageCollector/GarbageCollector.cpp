@@ -35,3 +35,13 @@ void GarbageCollector::Shutdown()
 		}
 	}
 }
+
+std::vector<AActor*>* GarbageCollector::GetActors()
+{
+	return &Actors_;
+}
+
+void GarbageCollector::AddActor(AActor* Actor)
+{
+	Actors_.push_back(Actor);
+}

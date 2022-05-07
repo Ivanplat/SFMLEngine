@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "Modules/BaseModule.h"
+#include "Objects/Actor/Actor.h"
 
 class GarbageCollector
 {
@@ -17,8 +18,11 @@ public:
 	T* NewModule();
 	template<class T>
 	T* GetModule();
+	std::vector<AActor*>* GetActors();
+	void AddActor(AActor* Actor);
 private:
 	std::vector<IBaseModule*> Modules_;
+	std::vector<AActor*> Actors_;
 };
 
 template<class T>

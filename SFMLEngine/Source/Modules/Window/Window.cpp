@@ -55,11 +55,14 @@ void Window::MainLoop()
 						}
 					}
 					window->clear();
-					for (auto i : Shapes_)
+					for (auto i : *GC->GetActors())
 					{
 						if (i)
 						{
-							window->draw(*i);
+							if (auto dp = i->GetDrawablePart())
+							{
+								window->draw(*dp);
+							}
 						}
 					}
 					window->display();

@@ -2,6 +2,9 @@
 #include "Modules/Window/Window.h"
 #include "Modules/GarbageCollector/GarbageCollector.h"
 #include <random>
+#include "Objects/Class/TSubclassOf.h"
+#include "Objects/Actor/Actor.h"
+#include "Actors/TestActor.h"
 
 
 int main()
@@ -17,9 +20,11 @@ int main()
 			std::cin >> ch;
 			if (ch == '1')
 			{
+				TSubclassOf<ATestActor> aClass;
+				auto nActor = SpawnActor<ATestActor>(aClass);
 				if (auto window = GC->GetModule<Window>())
 				{
-					for (int j = 0; j < 100; j++)
+					/*for (int j = 0; j < 100; j++)
 					{
 						auto shp = window->NewShape<sf::CircleShape>();
 						std::random_device rd;
@@ -40,7 +45,7 @@ int main()
 						shp->setFillColor(color);
 						shp->setRadius(10.0f);
 						shp->setPosition(sf::Vector2f(dist(gen), dist2(gen2)));
-					}
+					}*/
 				}
 			}
 			if (ch == '0')

@@ -17,6 +17,24 @@
     <Filter Include="Source\Modules\Window">
       <UniqueIdentifier>{be6aa6e6-84d2-4e2b-820a-8dec30677646}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Objects">
+      <UniqueIdentifier>{37cc2e9f-0278-451f-8f86-b5d7bd3ca247}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Object">
+      <UniqueIdentifier>{0ab7fe8e-db26-435c-9c57-3d9ce19e26b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Class">
+      <UniqueIdentifier>{5853d25c-85fd-48f0-8d32-f105964ab6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\RawObject">
+      <UniqueIdentifier>{78be9f9f-0de3-46ec-95bd-14049ce42fc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Actor">
+      <UniqueIdentifier>{d355788a-4166-4ebc-a236-3dfac6aa53ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Actors">
+      <UniqueIdentifier>{3e31e38f-22a2-4c0e-a0d9-1a9cce01165f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\pch.cpp">
@@ -34,6 +52,24 @@
     <ClCompile Include="Source\Modules\BaseModule.cpp">
       <Filter>Source\Modules</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Objects\RawObject\RawObject.cpp">
+      <Filter>Source\Objects\RawObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Class\Class.cpp">
+      <Filter>Source\Objects\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Object\Object.cpp">
+      <Filter>Source\Objects\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Actor\Actor.cpp">
+      <Filter>Source\Objects\Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Class\TSubclassOf.cpp">
+      <Filter>Source\Objects\Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Actors\TestActor.cpp">
+      <Filter>Source\Actors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\pch.h">
@@ -47,6 +83,24 @@
     </ClInclude>
     <ClInclude Include="Source\Modules\BaseModule.h">
       <Filter>Source\Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\RawObject\RawObject.h">
+      <Filter>Source\Objects\RawObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Class\Class.h">
+      <Filter>Source\Objects\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Object\Object.h">
+      <Filter>Source\Objects\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Actor\Actor.h">
+      <Filter>Source\Objects\Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Class\TSubclassOf.h">
+      <Filter>Source\Objects\Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Actors\TestActor.h">
+      <Filter>Source\Actors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
