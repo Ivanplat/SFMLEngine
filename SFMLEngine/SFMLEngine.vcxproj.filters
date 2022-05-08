@@ -35,6 +35,15 @@
     <Filter Include="Source\Actors">
       <UniqueIdentifier>{3e31e38f-22a2-4c0e-a0d9-1a9cce01165f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Objects\Mode">
+      <UniqueIdentifier>{05a0b9b5-4c83-4f06-acbc-7d5594b145e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Modes">
+      <UniqueIdentifier>{abbfc105-40f6-4d8c-be67-e1863edd6940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Modules\Logger">
+      <UniqueIdentifier>{2461e612-eec4-4d2b-8dd7-378ad7e0f5f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\pch.cpp">
@@ -70,6 +79,15 @@
     <ClCompile Include="Source\Actors\TestActor.cpp">
       <Filter>Source\Actors</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Modes\TestMode.cpp">
+      <Filter>Source\Modes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Mode\Mode.cpp">
+      <Filter>Source\Objects\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Modules\Logger\Logger.cpp">
+      <Filter>Source\Modules\Logger</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\pch.h">
@@ -101,6 +119,15 @@
     </ClInclude>
     <ClInclude Include="Source\Actors\TestActor.h">
       <Filter>Source\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Modes\TestMode.h">
+      <Filter>Source\Modes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Mode\Mode.h">
+      <Filter>Source\Objects\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Modules\Logger\Logger.h">
+      <Filter>Source\Modules\Logger</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

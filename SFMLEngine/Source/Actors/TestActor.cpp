@@ -12,12 +12,9 @@ ATestActor::ATestActor(sf::Color& Color, const float Radius, sf::Vector2f& Posit
 
 ATestActor::ATestActor()
 {
-	auto TempColor = sf::Color::Green;
-	auto TempPosition = sf::Vector2f(10.0f, 10.0f);
+	AActor::AActor();
 	CircleShape_ = new sf::CircleShape();
-	CircleShape_->setFillColor(TempColor);
-	CircleShape_->setRadius(10.0f);
-	CircleShape_->setPosition(TempPosition);
+	CircleShape_->setRadius(Size_);
 }
 
 ATestActor::~ATestActor()

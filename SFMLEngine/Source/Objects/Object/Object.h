@@ -9,7 +9,12 @@ public:
 	virtual ~SObject() noexcept {};
 public:
 	virtual void BeginStart();
+	virtual void Tick();
 	bool IsDrowable() const;
+	void SetTickEnabled(const bool NewState);
+protected:
+	static void SuperTick(SObject* self);
 protected:
 	bool IsDrowable_ = false;
+	bool TickEnabled_ = true;
 };

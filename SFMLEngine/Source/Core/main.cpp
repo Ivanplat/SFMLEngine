@@ -21,7 +21,11 @@ int main()
 			if (ch == '1')
 			{
 				TSubclassOf<ATestActor> aClass;
-				auto nActor = SpawnActor<ATestActor>(aClass);
+				FActorSpawnParams Params;
+				Params.Size = 20.0f;
+				Params.Position = sf::Vector2f(100.0f, 100.0f);
+				Params.Color = sf::Color::Blue;
+				auto nActor = SpawnActor<ATestActor>(aClass, Params);
 				if (auto window = GC->GetModule<Window>())
 				{
 					/*for (int j = 0; j < 100; j++)

@@ -3,10 +3,10 @@
 #include <iostream>
 #include <vector>
 #include "Modules/GarbageCollector/GarbageCollector.h"
+#include "Modules/Logger/Logger.h"
 
 
 static auto* GC = GarbageCollector::Instance();
-
 
 
 template<class T, class B>
@@ -22,6 +22,7 @@ T* SpawnActor(TSubclassOf<B> ActorClassToSpawn)
 	{
 		auto t = new T();
 		GC->AddActor(dynamic_cast<AActor*>(t));
+		dynamic_cast<AActor*>(t)->BeginStart();
 		return t;
 	}
 	else
@@ -29,4 +30,18 @@ T* SpawnActor(TSubclassOf<B> ActorClassToSpawn)
 		ActorClassToSpawn.Destruct();
 		return nullptr;
 	}
+}
+
+template<class T, class B>
+T* SpawnActor(TSubclassOf<B> ActorClassToSpawn, const FActorSpawnParams& SpawnParams)
+{
+	if (auto Actor = SpawnActor<T>(ActorClassToSpawn))
+	{
+		Actor->Owner_ = SpawnParams.Owner;
+		Actor->Position_ = SpawnParams.Position;
+		Actor->Color_ = SpawnParams.Color;
+		Actor->Size_ = SpawnParams.Size;
+		return Actor;
+	}
+	return nullptr;
 }

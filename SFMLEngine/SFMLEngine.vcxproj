@@ -169,24 +169,30 @@
   <ItemGroup>
     <ClCompile Include="Source\Actors\TestActor.cpp" />
     <ClCompile Include="Source\Core\main.cpp" />
+    <ClCompile Include="Source\Modes\TestMode.cpp" />
     <ClCompile Include="Source\Modules\BaseModule.cpp" />
     <ClCompile Include="Source\Modules\GarbageCollector\GarbageCollector.cpp" />
+    <ClCompile Include="Source\Modules\Logger\Logger.cpp" />
     <ClCompile Include="Source\Modules\Window\Window.cpp" />
     <ClCompile Include="Source\Objects\Actor\Actor.cpp" />
     <ClCompile Include="Source\Objects\Class\Class.cpp" />
     <ClCompile Include="Source\Objects\Class\TSubclassOf.cpp" />
+    <ClCompile Include="Source\Objects\Mode\Mode.cpp" />
     <ClCompile Include="Source\Objects\Object\Object.cpp" />
     <ClCompile Include="Source\Objects\RawObject\RawObject.cpp" />
     <ClCompile Include="Source\pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Actors\TestActor.h" />
+    <ClInclude Include="Source\Modes\TestMode.h" />
     <ClInclude Include="Source\Modules\BaseModule.h" />
     <ClInclude Include="Source\Modules\GarbageCollector\GarbageCollector.h" />
+    <ClInclude Include="Source\Modules\Logger\Logger.h" />
     <ClInclude Include="Source\Modules\Window\Window.h" />
     <ClInclude Include="Source\Objects\Actor\Actor.h" />
     <ClInclude Include="Source\Objects\Class\Class.h" />
     <ClInclude Include="Source\Objects\Class\TSubclassOf.h" />
+    <ClInclude Include="Source\Objects\Mode\Mode.h" />
     <ClInclude Include="Source\Objects\Object\Object.h" />
     <ClInclude Include="Source\Objects\RawObject\RawObject.h" />
     <ClInclude Include="Source\pch.h" />
