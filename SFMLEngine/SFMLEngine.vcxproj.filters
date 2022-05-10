@@ -41,6 +41,15 @@
     <Filter Include="Source\Core\Engine">
       <UniqueIdentifier>{c342a2ad-0bc0-4247-aa81-f5024f54dbce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Objects\Character">
+      <UniqueIdentifier>{8437a13a-db4a-4678-bf21-6ddd752513c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Pawn">
+      <UniqueIdentifier>{80443288-e88c-4ca3-af3c-52e62f5a5b57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Controller">
+      <UniqueIdentifier>{db77b3d2-834a-4777-9c1b-8ea3be2a70db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\pch.cpp">
@@ -82,6 +91,15 @@
     <ClCompile Include="Source\Core\Engine\Engine.cpp">
       <Filter>Source\Core\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Objects\Pawn\Pawn.cpp">
+      <Filter>Source\Objects\Pawn</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Controller\Controller.cpp">
+      <Filter>Source\Objects\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Character\Character.cpp">
+      <Filter>Source\Objects\Character</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\pch.h">
@@ -122,6 +140,15 @@
     </ClInclude>
     <ClInclude Include="Source\Core\Engine\Engine.h">
       <Filter>Source\Core\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Pawn\Pawn.h">
+      <Filter>Source\Objects\Pawn</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Controller\Controller.h">
+      <Filter>Source\Objects\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Character\Character.h">
+      <Filter>Source\Objects\Character</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

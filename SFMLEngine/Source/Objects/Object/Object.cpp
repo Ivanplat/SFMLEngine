@@ -18,9 +18,9 @@ void SObject::Tick()
 
 }
 
-bool SObject::IsDrowable() const
+bool SObject::IsDrawable() const
 {
-	return IsDrowable_;
+	return IsDrawable_;
 }
 
 void SObject::SetTickEnabled(const bool NewState)

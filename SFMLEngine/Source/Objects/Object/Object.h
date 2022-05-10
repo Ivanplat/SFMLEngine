@@ -10,11 +10,11 @@ public:
 public:
 	virtual void BeginStart();
 	virtual void Tick();
-	bool IsDrowable() const;
+	bool IsDrawable() const;
 	void SetTickEnabled(const bool NewState);
 protected:
 	static void SuperTick(SObject* self);
 protected:
-	bool IsDrowable_ = false;
+	bool IsDrawable_ = false;
 	bool TickEnabled_ = true;
 };

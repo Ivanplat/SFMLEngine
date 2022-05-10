@@ -3,7 +3,7 @@
 
 AActor::AActor() noexcept
 {
-	IsDrowable_ = true;
+	IsDrawable_ = true;
 }
 
 sf::Shape* AActor::GetDrawablePart()
