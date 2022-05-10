@@ -3,6 +3,7 @@
 
 AMode::AMode()
 {
+	SetClassName();
 }
 
 AMode::~AMode()

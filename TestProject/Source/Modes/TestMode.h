@@ -3,5 +3,7 @@
 class ATestMode : public AMode
 {
 public:
+	explicit ATestMode();
+public:
 	virtual void BeginStart() override;
 };

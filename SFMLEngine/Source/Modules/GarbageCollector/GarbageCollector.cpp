@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "GarbageCollector.h"
 #include "Modules/Window/Window.h"
+#include "Core/MinimalCore.h"
 
 GarbageCollector::~GarbageCollector() noexcept
 {
@@ -33,6 +34,10 @@ void GarbageCollector::Shutdown()
 		{
 			i->ShutdownModule();
 		}
+	}
+	if (Engine)
+	{
+		delete Engine;
 	}
 }
 

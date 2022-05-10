@@ -13,6 +13,10 @@ public:
 	void Destruct();
 private:
 	T* Class;
+public:
+	TSubclassOf<T>& operator=(T* OtherClass);
+	TSubclassOf<T>& operator=(T& OtherClass);
+	TSubclassOf<T>& operator=(T OtherClass);
 };
 
 template<class T>
@@ -46,4 +50,25 @@ void TSubclassOf<T>::Destruct()
 	{
 		delete Class;
 	}
+}
+
+template<class T>
+inline TSubclassOf<T>& TSubclassOf<T>::operator=(T* OtherClass)
+{
+	Class = OtherClass;
+	return *this;
+}
+
+template<class T>
+inline TSubclassOf<T>& TSubclassOf<T>::operator=(T& OtherClass)
+{
+	Class = &OtherClass;
+	return *this;
+}
+
+template<class T>
+inline TSubclassOf<T>& TSubclassOf<T>::operator=(T OtherClass)
+{
+	Class = &OtherClass;
+	return *this;
 }

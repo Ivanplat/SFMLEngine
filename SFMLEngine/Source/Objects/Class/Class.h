@@ -1,11 +1,14 @@
 #pragma once
+#include <string>
 
 class SClass
 {
 public:
-	explicit SClass() noexcept = default;
+	explicit SClass() noexcept;
 	virtual ~SClass() noexcept = default;
+	void SetClassName();
 public:
+	std::string ClassName;
 };
 
 

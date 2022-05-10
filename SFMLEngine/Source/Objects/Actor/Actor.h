@@ -1,7 +1,7 @@
 #pragma once
-
 #include "Objects/Object/Object.h"
 #include "Objects/Class/TSubclassOf.h"
+#include <SFML/Graphics.hpp>
 
 
 struct FActorSpawnParams
@@ -20,6 +20,7 @@ public:
 	virtual ~AActor() noexcept {};
 public:
 	virtual sf::Shape* GetDrawablePart();
+	virtual void Initialize();
 protected:
 	SObject* Owner_;
 	sf::Vector2f Position_ = sf::Vector2f(0.0f, 0.0f);

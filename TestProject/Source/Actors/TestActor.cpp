@@ -14,6 +14,8 @@ ATestActor::ATestActor()
 {
 	AActor::AActor();
 	CircleShape_ = new sf::CircleShape();
+	CircleShape_->setFillColor(Color_);
+	CircleShape_->setPosition(Position_);
 	CircleShape_->setRadius(Size_);
 }
 
