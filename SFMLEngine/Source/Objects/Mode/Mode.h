@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Objects/Actor/Actor.h"
+#include "MinimalCore.h"
 
 
 class AMode : public AActor
@@ -10,4 +10,7 @@ public:
 	virtual ~AMode();
 public:
 	virtual void BeginStart() override;
+public:
+	TSubclassOf<class AController> ControllerClass;
+	TSubclassOf<class ACharacter> CharacterClass;
 };

@@ -3,12 +3,23 @@
 #include "Core/MinimalCore.h"
 #include "Modules/Window/Window.h"
 #include <thread>
+#include "Objects/Character/Character.h"
+#include "Objects/Controller/Controller.h"
+
+AMode* SEngine::CurrentMode_ = nullptr;
+APawn* SEngine::CurrentPawn_ = nullptr;
+AController* SEngine::CurrentController_ = nullptr;
+
 
 void SEngine::StartupEngine()
 {
 	if (CurrentMode_)
 	{
 		std::cout << "GAMEMODE";
+		if (auto Controller = SpawnActor<AController>(CurrentMode_->ControllerClass))
+		{
+			CurrentController_ = Controller;
+		}
 		CurrentMode_->BeginStart();
 	}
 	else
@@ -60,7 +71,43 @@ void SEngine::SetMode(AMode* NewMode)
 	CurrentMode_ = NewMode;
 }
 
-AMode* SEngine::GetCurrentMode()
+AMode* SEngine::GetCurrentMode() const
 {
 	return CurrentMode_;
+}
+
+AController* SEngine::GetCurrentController() const
+{
+	return CurrentController_;
+}
+
+void SEngine::HandleKeyEvent(sf::Keyboard::Key key)
+{
+	switch (key)
+	{
+	case sf::Keyboard::W: 
+	{
+		if (IsCharacterInitialized())
+		{
+			sf::Vector2f Direction = CurrentPawn_->GetActorForwardVector();
+			if (auto controller = CurrentPawn_->GetController<AController>())
+			{
+				controller->AddMovementInput(Direction, 1.0f);
+			}
+		}
+	}
+	break;
+	default:
+		break;
+	}
+}
+
+const bool SEngine::IsCharacterInitialized() const
+{
+	return CurrentPawn_ ? true : false;
+}
+
+void SEngine::SetCurrentPawn(APawn* NewPawn)
+{
+	CurrentPawn_ = NewPawn;
 }

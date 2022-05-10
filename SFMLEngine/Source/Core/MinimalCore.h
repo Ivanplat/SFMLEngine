@@ -3,6 +3,7 @@
 #include "Modules/GarbageCollector/GarbageCollector.h"
 #include "Objects/Actor/Actor.h"
 #include "Objects/Mode/Mode.h"
+#include "Objects/Character/Character.h"
 
 static SEngine* Engine = new SEngine();
 static GarbageCollector* GC = GarbageCollector::Instance();

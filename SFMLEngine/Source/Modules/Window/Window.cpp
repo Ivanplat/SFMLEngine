@@ -54,6 +54,10 @@ void Window::MainLoop()
 							break;
 						}
 					}
+					if (e.type == sf::Event::KeyPressed)
+					{
+						Engine->HandleKeyEvent(e.key.code);
+					}
 					window->clear();
 					for (auto i : *GC->GetActors())
 					{

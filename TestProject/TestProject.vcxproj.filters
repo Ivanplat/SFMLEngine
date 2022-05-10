@@ -16,6 +16,9 @@
     <Filter Include="Source\Modes">
       <UniqueIdentifier>{4e9749a5-e987-40a5-bca3-f638ad356a63}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Characters">
+      <UniqueIdentifier>{ae346cf4-6602-40e8-8e52-fade6faa5507}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Core\main.cpp">
@@ -27,6 +30,9 @@
     <ClCompile Include="Source\Modes\TestMode.cpp">
       <Filter>Source\Modes</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Characters\TestCharacter.cpp">
+      <Filter>Source\Characters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Actors\TestActor.h">
@@ -34,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Source\Modes\TestMode.h">
       <Filter>Source\Modes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Characters\TestCharacter.h">
+      <Filter>Source\Characters</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
