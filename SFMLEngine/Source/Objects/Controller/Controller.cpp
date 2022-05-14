@@ -5,6 +5,7 @@
 AController::AController()
 {
 	IsDrawable_ = false;
+	InputComponent_ = NewObject<SInputComponent>();
 }
 
 void AController::AddMovementInput(sf::Vector2f Direction, const float Value)
@@ -23,5 +24,11 @@ void AController::Posses(APawn* Pawn)
 {
 	ControlledPawn_ = Pawn;
 	ControlledPawn_->SetOwner(this);
+	ControlledPawn_->SetupInputComponent(nullptr);
 	Engine->SetCurrentPawn(Pawn);
+}
+
+SInputComponent* AController::GetInputComponent()
+{
+	return InputComponent_;
 }

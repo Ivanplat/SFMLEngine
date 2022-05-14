@@ -5,3 +5,8 @@ ACharacter::ACharacter()
 {
 	//Initialize();
 }
+
+void ACharacter::BeginStart()
+{
+	APawn::BeginStart();
+}

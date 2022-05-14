@@ -34,3 +34,20 @@ void SObject::SuperTick(SObject* self)
 	auto ST = std::async(std::launch::deferred, & SObject::SuperTick, self);
 	ST.wait_for(std::chrono::milliseconds(10));
 }
+
+void SObject::AddDelegate(IDelegateVoid* Delegate)
+{
+	Delegates.push_back(Delegate);
+}
+
+IDelegateVoid* SObject::FindDelegate(std::string FunctionName)
+{
+	for (auto i = 0; i < Delegates.size(); i++)
+	{
+		if (Delegates[i]->DelegateName == FunctionName)
+		{
+			return Delegates[i];
+		}
+	}
+	return nullptr;
+}

@@ -12,11 +12,11 @@ void ATestMode::BeginStart()
 {
 	TSubclassOf<ATestChracter> TestActorClass;
 	FActorSpawnParams Params;
+	auto c = Engine->GetCurrentController();
 	Params.Color = sf::Color::Blue;
-	Params.Owner = nullptr;
+	Params.Owner = c;
 	Params.Position = sf::Vector2f(10, 10);
 	Params.Size = 10;
 	auto p = SpawnActor<ATestChracter>(TestActorClass, Params);
-	auto c = Engine->GetCurrentController();
 	c->Posses(Cast<APawn>(p));
 }

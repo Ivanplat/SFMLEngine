@@ -9,6 +9,9 @@ public:
 	void SetClassName();
 public:
 	std::string ClassName;
+	static SClass* StaticClass();
+private:
+	static SClass* Self_;
 };
 
 

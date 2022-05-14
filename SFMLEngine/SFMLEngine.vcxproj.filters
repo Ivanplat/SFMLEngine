@@ -50,6 +50,12 @@
     <Filter Include="Source\Objects\Controller">
       <UniqueIdentifier>{db77b3d2-834a-4777-9c1b-8ea3be2a70db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Objects\ActorComponent">
+      <UniqueIdentifier>{5ad3e941-be4c-4487-b1e1-0c4c8e5d8b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Objects\Delegates">
+      <UniqueIdentifier>{7bb72636-9c59-46fc-9c39-9fa8484a29ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\pch.cpp">
@@ -100,6 +106,18 @@
     <ClCompile Include="Source\Objects\Character\Character.cpp">
       <Filter>Source\Objects\Character</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Objects\ActorComponent\ActorComponent.cpp">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\ActorComponent\InputComponent.cpp">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\ActorComponent\MovementComponent.cpp">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Objects\Delegates\Delegate.cpp">
+      <Filter>Source\Objects\Delegates</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\pch.h">
@@ -149,6 +167,18 @@
     </ClInclude>
     <ClInclude Include="Source\Objects\Character\Character.h">
       <Filter>Source\Objects\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\ActorComponent\ActorComponent.h">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\ActorComponent\InputComponent.h">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\ActorComponent\MovementComponent.h">
+      <Filter>Source\Objects\ActorComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Delegates\Delegate.h">
+      <Filter>Source\Objects\Delegates</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

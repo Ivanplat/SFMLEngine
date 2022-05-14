@@ -87,14 +87,7 @@ void SEngine::HandleKeyEvent(sf::Keyboard::Key key)
 	{
 	case sf::Keyboard::W: 
 	{
-		if (IsCharacterInitialized())
-		{
-			sf::Vector2f Direction = CurrentPawn_->GetActorForwardVector();
-			if (auto controller = CurrentPawn_->GetController<AController>())
-			{
-				controller->AddMovementInput(Direction, 1.0f);
-			}
-		}
+		CurrentController_->GetInputComponent()->HandleKeyEvent(key);
 	}
 	break;
 	default:

@@ -20,9 +20,11 @@ public:
 	T* GetModule();
 	std::vector<AActor*>* GetActors();
 	void AddActor(AActor* Actor);
+	void AddObject(SObject* Object);
 private:
 	std::vector<IBaseModule*> Modules_;
 	std::vector<AActor*> Actors_;
+	std::vector<SObject*> Objects_;
 };
 
 template<class T>

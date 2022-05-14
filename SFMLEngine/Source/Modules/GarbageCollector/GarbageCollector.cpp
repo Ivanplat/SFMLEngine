@@ -35,6 +35,13 @@ void GarbageCollector::Shutdown()
 			i->ShutdownModule();
 		}
 	}
+	for (auto i : Objects_)
+	{
+		if (i)
+		{
+			delete i;
+		}
+	}
 	if (Engine)
 	{
 		delete Engine;
@@ -49,4 +56,9 @@ std::vector<AActor*>* GarbageCollector::GetActors()
 void GarbageCollector::AddActor(AActor* Actor)
 {
 	Actors_.push_back(Actor);
+}
+
+void GarbageCollector::AddObject(SObject* Object)
+{
+	Objects_.push_back(Object);
 }
